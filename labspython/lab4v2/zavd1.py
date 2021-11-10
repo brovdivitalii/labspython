@@ -7,4 +7,4 @@ b = float(input('input b = '))
 c = float(input('input c = '))
 p = (a + b + c)/2
 s = math.sqrt(p*(p-a)*(p-b)*(p-c))
-print('Площа трикутника - {0:3.3f}'.format(s))
+print('Площа triangle - {0:3.3f}'.format(s))
