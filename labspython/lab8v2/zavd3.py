@@ -15,7 +15,7 @@ print(g(7) + g(9))
 
 
 
-# import math
+# import math.
 # g0 = 9
 # g1 = 35
 # gi = 0
