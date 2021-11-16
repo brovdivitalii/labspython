@@ -2,12 +2,25 @@
 # Переставляючи рядки даної матриці, розташувати їх у відповідності з ростом характеристик.
 # Характеристикою рядка цілочислової матриці назвемо суму її додатних парних елементів.
 import random
-import numpy as np
 a = []
+b = []
+sum = 0
 n = int(input("Введіть кількість рядків матриці : "))
 m = int(input("Введіть кількість стовбців матриці : "))
 for i in range(n):
     a.append([float(random.randint(-5,15)) for j in range(m)])
-a = np.array(a)
-print(a)
+for i in range(n):
+    sum = 0
+    for j in range(m):
+        if a[i][j] > 0 and a[i][j] % 2 == 0 :
+            sum += a[i][j]
+    b.append(sum)
+print(*a, sep = "\n")
+print("\n",b,"\n")
 
+for i in range(n-1,-1,-1):
+    a[b.index(max(b))], a[i] = a[i], a[b.index(max(b))]
+    b[b.index(max(b))], b[i] = b[i], b[b.index(max(b))]
+    b[b.index(max(b))] = -1
+
+print(*a, sep = "\n")
