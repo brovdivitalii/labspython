@@ -4,17 +4,19 @@
 import random
 a = []
 b = []
-sum = 0
+suma = 0
 n = int(input("Введіть кількість рядків матриці : "))
 m = int(input("Введіть кількість стовбців матриці : "))
-for i in range(n):
-    a.append([float(random.randint(-5,15)) for j in range(m)])
-for i in range(n):
-    sum = 0
-    for j in range(m):
-        if a[i][j] > 0 and a[i][j] % 2 == 0 :
-            sum += a[i][j]
-    b.append(sum)
+a = [[float(random.randint(-5,15)) for j in range(m)] for i in range(n)]
+#for i in range(n):
+#   a.append([float(random.randint(-5,15)) for j in range(m)])
+# for i in range(n):
+#     suma = 0
+#     for j in range(m):
+#         if a[i][j] > 0 and a[i][j] % 2 == 0 :
+#             suma += a[i][j]
+#     b.append(suma)
+b = [sum(filter(lambda el : (el > 0 and el % 2 == 0), row)) for row in a]
 print(*a, sep = "\n")
 print("\n",b,"\n")
 
