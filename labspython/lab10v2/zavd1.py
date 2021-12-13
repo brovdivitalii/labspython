@@ -20,7 +20,7 @@ class Vector:
     def norma_vector(self):
         return [(x/self.lenth_vector()) for x in self.coordinates]
 
-vector1 = Vector(4)
+vector1 = Vector(int(input('введіть розмірність = ')))
 vector1.entering_elements()
 vector1.vector_output()
 print(vector1.lenth_vector())
