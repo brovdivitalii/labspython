@@ -10,15 +10,17 @@ class Vector:
 
     def entering_elements(self):
         for i in range(self.size):
-            self.coordinates.append(float(input('введіть координату {0} = '.format(i+1))))
+            self.coordinates.append(float(input('введіть координату {0} = '.format(i + 1))))
 
     def vector_output(self):
         print(str(self.coordinates))
 
     def lenth_vector(self):
-        return (sum(map(lambda x: x ** 2, self.coordinates)))**(1/2)
+        return (sum(map(lambda x: x ** 2, self.coordinates))) ** (1 / 2)
+
     def norma_vector(self):
-        return [(x/self.lenth_vector()) for x in self.coordinates]
+        return [(x / self.lenth_vector()) for x in self.coordinates]
+
 
 vector1 = Vector(int(input('введіть розмірність = ')))
 vector1.entering_elements()
