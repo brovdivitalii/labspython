@@ -6,7 +6,7 @@ import math
 x = float(input('Введіть х = '))
 n = float(input('Введіть n = '))
 if x < n or x ==n:
-    y = math.log(abs(x))
+    y = math.log(abs(x)) - n
     print('y = {0:3.3f}'.format(y))
 else:
     y = math.cos(n*x)
